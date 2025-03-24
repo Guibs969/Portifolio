@@ -7,6 +7,21 @@
   <title>Guilherme Brandão</title>
   <meta name="description" content="Desenvolvedor Web FullStack">
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 800px) {
+      .footer {
+        display: none;
+      }
+
+      .header-menu li:last-child {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -32,13 +47,13 @@
   <section class="experiencia" id="experiencia" aria-label="Experiência">
     <h2 class="subtitulo">Experiência</h2>
     <div>
-      <p class="experiencia-texto">Desenvolvo diversos sistemas web em meu estágio, atuo  no back utilizando <strong>PHP</strong> e no front   <strong>React</strong>. Além do estágio também tenhos projetos da UnB que participei, como o QturmaFga utilizando <strong>React</strong>, <strong>Html & Css</strong> e <strong>TipeScript</strong>. E o aplicativo  GeroCuidado  eu trabalhei com <strong>Android Studio</strong> e <strong>React</strong> no projeto.</p>
+      <p class="experiencia-texto">Desenvolvo diversos sistemas web em meu estágio, atuo no back utilizando <strong>PHP</strong> e no front <strong>React</strong>. Além do estágio também tenhos projetos da UnB que participei, como o QturmaFga utilizando <strong>React</strong>, <strong>Html & Css</strong> e <strong>TipeScript</strong>. E o aplicativo GeroCuidado eu trabalhei com <strong>Android Studio</strong> e <strong>React</strong> no projeto.</p>
 
       <div class="empresa">
         <span class="empresa-ano">2024-26</span>
         <h3 class="empresa-titulo">MEC</h3>
         <span class="empresa-titulo">Estagiário</span>
-        <p class="empresa-texto">No Mec  eu trabalho no desenvolvimento web completo, utilizando HTML, CSS, JavaScript, TypeScript, Node, React e PhP. Além disso, também prestei consultoria no Design.</p>
+        <p class="empresa-texto">No Mec eu trabalho no desenvolvimento web completo, utilizando HTML, CSS, JavaScript, TypeScript, Node, React e PhP. Além disso, também prestei consultoria no Design.</p>
         <ul class="empresa-habilidades">
           <li>HTML</li>
           <li>CSS</li>
@@ -69,7 +84,7 @@
         <span class="empresa-ano">2024</span>
         <h3 class="empresa-titulo">QueTurma-FGA</h3>
         <span class="empresa-titulo">Projeto UnB</span>
-        <p class="empresa-texto">QueTurma-FGA  é um Site de Avaliações de
+        <p class="empresa-texto">QueTurma-FGA é um Site de Avaliações de
           Professores.</p>
         <ul class="empresa-habilidades">
           <li>HTML</li>
@@ -91,8 +106,7 @@
         <p class="formacao-texto">
           Atualmete minha experiência acadêmica é composta por duas graduações:
           <br>
-           <strong>Engenharia de Software - UnB</strong> 🎓 <br> 
-            <strong> Análise e Desenvolvimento de Sistemas - PUC Minas🎓.</strong>
+          <strong>Engenharia de Software - UnB</strong> 🎓 <br>
         </p>
 
         <ul class="faculdade-lista">
@@ -101,30 +115,9 @@
             <h3 class="faculdade-curso">Engenharia de Software</h3>
             <span class="faculdade-instituicao">UNB</span>
           </li>
-          <li class="faculdade">
-            <span class="faculdade-tipo">Pós Graduação</span>
-            <h3 class="faculdade-curso">Análise e Desenvolvimento de Sistemas</h3>
-            <span class="faculdade-instituicao">PUC-Minas</span>
-          </li>
-
-          <li class="faculdade">
-            <span class="faculdade-tipo"> FUTURO - MBA</span>
-            <h3 class="faculdade-curso">Arquitetura de Software</h3>
-            <span class="faculdade-instituicao">FIAP</span>
-          </li>
         </ul>
 
         <div class="formacao-extra">
-          <div class="cursos">
-            <h3>Cursos Intensivos</h3>
-            <ul>
-              <li>
-                Desenvolvimento Web Completo - Udemy
-                 <span>96h</span></li>
-              <li>UX Design & UI Design - Origamid <span>56h</span></li>
-              <li>Front End -Origamid <span>72h</span></li>
-            </ul>
-          </div>
           <div class="idiomas">
             <h3>Idiomas</h3>
             <ul>
@@ -139,15 +132,28 @@
 
   <footer class="footer" id="contato">
     <div class="footer-container">
-      <p class="footer-texto">Estou disponível para novos projetos no momento. Entre em contato comigo e marcamos uma conversa 👋</p>
+      <p class="footer-texto">Estou disponível para novos projetos no momento.<br> Entre em contato comigo e marcamos uma conversa 👋</p>
       <ul class="footer-contato">
         <li>guilhermeferreirabrandao969@gmail.com</li>
         <li>+55 61 99918-5864</li>
-        <li>Dê uma olhada em meus projetos em meu <a href="https://github.com/Guibs969">Github</a></li>
+        <li>Dê uma olhada em meus projetos em meu <br>
+          <a href="https://github.com/Guibs969">Github</a>
+        </li>
       </ul>
       <p class="footer-copy">Guilherme Brandão. Alguns direitos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.header-menu a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 
 </body>
 

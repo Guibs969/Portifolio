@@ -1,6 +1,8 @@
 .formacao {
   background: #141414;
   color: #ffffff;
+  padding-bottom: 60px; /* Adicionar padding inferior */
+  width: auto; /* Ajustar largura para auto */
 }
 
 .formacao-container {

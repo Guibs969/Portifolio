@@ -1,5 +1,7 @@
 .footer {
   background: #000000;
+  padding-top: 60px; /* Adicionar padding superior */
+  width: auto; /* Ajustar largura para auto */
 }
 
 .footer-container {
@@ -44,4 +46,5 @@
   .footer-contato li {
     font-size: 1.5rem;
   }
+
 }

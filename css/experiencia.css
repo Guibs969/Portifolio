@@ -93,6 +93,9 @@
   .experiencia-texto {
     font-size: 1.25rem;
   }
+  .empresa {
+    grid-template-columns: 1fr;
+  }
   .empresa-ano {
     position: initial;
     order: 1;
